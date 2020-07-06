@@ -1,2 +1,5 @@
+from django.urls import include, path
 
-urlpatterns = []
+urlpatterns = [
+    path('recaptcha_v3/', include('tests.test_recaptcha_v3.urls')),
+]

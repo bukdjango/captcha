@@ -1,0 +1,17 @@
+{% load recaptcha_v3 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% recaptcha_v3_script %}
+    {% recaptcha_v3_run %}
+</head>
+<body>
+<form method="post">
+    {{ form }}
+    <input type="submit" name="submit" value="Send">
+    {% csrf_token %}
+</form>
+</body>
+</html>
