@@ -18,3 +18,7 @@ run: build
 
 suite: build test install
 build-test: build test
+
+.PHONY: dist
+dist: build
+	docker run --rm --volume=${PWD}:/dockerapp test python setup.py sdist
